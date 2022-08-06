@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="calc.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div align="center">
+        <table class="calculator">
+            <tr>
+                <td colspan="3">
+                  <input class="display-box" id="interface" type="text" disabled/>
+                </td>
+                <td>
+                  <input id="btn" type="button"   value="C" />
+                </td>
+            </tr>
+          <tr>
+            <td>
+              <input type="button" value="1" onclick="obj.addDigit(1)"/>
+            </td>
+            <td>
+              <input type="button" value="2" onclick="obj.addDigit(2)"/>
+            </td>
+            <td>
+              <input type="button" value="3" onclick="obj.addDigit(3)"/>
+            </td>
+            <td>
+              <input  type="button" value="+" onclick="obj.setOperator(100)"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="4" onclick="obj.addDigit(4)"/>
+            </td>
+            <td>
+              <input type="button" value="5" onclick="obj.addDigit(5)"/>
+            </td>
+            <td>
+              <input  type="button" value="6" onclick="obj.addDigit(6)"/>
+            </td>
+            <td>
+              <input type="button" value="-" onclick="obj.setOperator(200)"/>
+            </td>
+          </tr>
+         <tr>
+            <td>
+                <input  type="button" value="7" onclick="obj.addDigit(7)"/>
+              </td>
+              <td>
+                <input type="button" value="8" onclick="obj.addDigit(8)"/>
+              </td>
+              <td>
+                <input type="button" value="9" onclick="obj.addDigit(9)"/>
+              </td>
+              <td>
+                <input type="button" value="X" onclick="obj.setOperator(400)"/>
+              </td>
+         </tr>
+         <tr>
+            <td>
+                <input type="button" value="0" onclick="obj.addDigit(0)"/>
+              </td>
+              <td>
+                <input type="button" value="."/>
+              </td>
+              <td>
+                <input  type="button" value="=" onclick="obj.equals()" id="btn"/>
+              </td>
+              <td>
+                <input type="button" value="/" onclick="obj.setOperator(300)"/>
+              </td>
+         </tr>
+        </table>
+    </div>
+  </body>
+</html>
