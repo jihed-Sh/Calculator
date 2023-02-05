@@ -1,8 +1,8 @@
 public enum Operators {
     ADD('+', 0),
-    MINUS('-', 0),
-    MULTIPLE('*', 1),
-    DIVIDE('/', 1);
+    MINUS('-', 1),
+    MULTIPLE('*', 2),
+    DIVIDE('/', 2);
 
     private final int precedence;
     private final char character;

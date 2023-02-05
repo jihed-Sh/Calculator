@@ -32,15 +32,23 @@ public class calc {
                 operators.pop();
             } else {
                 wasOperator = true;
+                digits.push(Integer.parseInt(buffer.toString()));
             }
-            digits.push(Integer.parseInt(buffer.toString()));
+
             while(!operators.isEmpty()&& operators.peek().getPrecedence() > operateur.getPrecedence()) {
                     reduce();
                 }
 
             operators.push(operateur);
 
-            clearBuffer();
+            //clearBuffer();
+        }else if(digits.peek()!=null){
+            wasOperator = true;
+            buffer.append(digits.peek());
+            while(!operators.isEmpty()&& operators.peek().getPrecedence() > operateur.getPrecedence()) {
+                reduce();
+            }
+            operators.push(operateur);
         }
 
         return getBuffer();
@@ -67,7 +75,6 @@ public class calc {
 
         return getBuffer();
     }
-
     private void reduce() {
         while (!operators.isEmpty()) {
             Operators o = operators.pop();
